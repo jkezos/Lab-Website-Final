@@ -179,7 +179,7 @@ h3.person-name {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+  color: var(--dark);
   font-size: 0.75rem;
   font-family: var(--font-body);
   letter-spacing: 0.08em;
@@ -214,6 +214,7 @@ h3.person-name {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  max-width: 1400px;
   margin-bottom: 4rem;
 }
  
@@ -282,7 +283,7 @@ h3.person-name {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--dark);
 }
  
 .contact-value {
@@ -316,7 +317,7 @@ h3.person-name {
  
 .project-desc {
   font-size: 0.93rem;
-  color: var(--muted);
+  color: var(--dark);
   margin-bottom: 0.6rem;
 }
  
@@ -360,7 +361,7 @@ h3.person-name {
 .person-role {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--dark);
   letter-spacing: 0.03em;
   margin-bottom: 0.6rem;
 }
@@ -436,6 +437,11 @@ h3.person-name {
 .alumni-note {
   color: var(--dark);
   font-size: 0.85rem;
+}
+
+.image-stack {
+  display: flex;            /* Activates flexbox layout */
+  flex-direction: column;   /* Strictly forces elements to stack vertically */
 }
  
 /* =============================================
