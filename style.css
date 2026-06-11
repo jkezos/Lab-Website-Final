@@ -214,7 +214,9 @@ h3.person-name {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
-  max-width: 1400px;
+  width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
   margin-bottom: 4rem;
 }
  
