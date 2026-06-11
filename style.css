@@ -497,94 +497,68 @@ h3.person-name {
 
 
 /* =============================================
-   RESPONSIVE
+   RESPONSIVE (Merged & Updated for All Mobile)
    ============================================= */
-@media (max-width: 680px) {
+@media (max-width: 768px) {
+  
+  /* Navbar Adjustments */
+  .navbar {
+    padding: 0.75rem 1rem;       /* Reduce heavy desktop side-padding */
+    height: auto;                /* Let height adjust naturally if items stack */
+    min-height: var(--nav-height); 
+    flex-direction: column;      /* Stack logo and navigation links if room is tight */
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
   .navbar__subtitle {
-    display: none;
+    display: none;               /* Kept from your original code */
   }
  
   .navbar__title {
-    font-size: 1.05rem;
+    font-size: 1.2rem;           /* Adjusted to balance your old and new sizes */
+  }
+
+  .navbar__links {
+    gap: 1rem;                   /* Kept from your original code so links fit nicely */
+  }
+
+  .nav-link {
+    font-size: 0.75rem;          /* Make links legible but compact on mobile */
+  }
+
+  /* Page Constraints */
+  .page {
+    padding: 1.5rem 1rem 3rem;   /* Eradicates layout shifting by shrinking page buffers */
   }
  
+  /* Layout Stacking (Crucial for preventing the left-shift) */
   .about-top {
-    flex-direction: column;
+    flex-direction: column;      /* Kept from your original code */
+    gap: 2rem;
+    align-items: center;
   }
  
   .about-image .image-placeholder {
-    width: 100%;
+    width: 100%;                 /* Kept from your original code */
+    max-width: 320px;            /* Prevents the image placeholder from stretching infinitely */
     height: 200px;
   }
  
   .pi-card {
-    flex-direction: column;
+    flex-direction: column;      /* Kept from your original code */
+    align-items: center;
   }
  
   .project-card {
-    flex-direction: column;
-  }
- 
-  .contact-grid {
-    flex-direction: column;
-  }
- 
-  .navbar__links {
-    gap: 1rem;
-  }
-
-   /* =============================================
-   MOBILE RESPONSIVE STYLES (Screens under 768px)
-   ============================================= */
-@media (max-width: 768px) {
-  
-  /* 1. Fix the Navbar so it scales down nicely */
-  .navbar {
-    padding: 0 1rem;              /* Reduce heavy side-padding */
-    height: auto;                 /* Let height adjust naturally */
-    min-height: var(--nav-height); 
-    flex-direction: column;       /* Stack brand and links vertically if they don't fit */
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .navbar__title {
-    font-size: 1.35rem;           /* Make the "Fly Lab" title slightly smaller for small screens */
-  }
-
-  .navbar__links {
-    gap: 1.25rem;                 /* Bring navigation tabs closer together so they don't overflow */
-  }
-
-  .nav-link {
-    font-size: 0.75rem;           /* Slightly smaller font for links */
-  }
-
-  /* 2. Fix the Pages */
-  .page {
-    padding: 1.5rem 1rem 3rem;   /* Reduce heavy page margins on mobile phones */
-  }
-
-  /* 3. Fix the About Layout (CRITICAL) */
-  .about-top {
-    flex-direction: column;       /* STACK the text and photo vertically on a phone! */
-    gap: 2rem;
-    align-items: center;          /* Center the content nicely */
-    text-align: left;
-  }
-
-  .image-placeholder:not(.small):not(.person) {
-    width: 100%;                  /* Allow your main image placeholders to scale down safely */
-    max-width: 320px;
-    height: 200px;
-  }
-
-  /* 4. Fix Research Project Cards */
-  .project-card {
-    flex-direction: column;       /* Stack project thumbnails/images on top of the descriptions */
+    flex-direction: column;      /* Kept from your original code */
     align-items: flex-start;
     gap: 1rem;
   }
+ 
+  .contact-grid {
+    flex-direction: column;      /* Kept from your original code */
+    gap: 1rem;
+  }
 }
-} 
+
