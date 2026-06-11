@@ -489,30 +489,38 @@ h3.person-name {
    ============================================= */
 @media (max-width: 768px) {
   
-  /* Navbar Adjustments */
+/* Navbar Adjustments */
   .navbar {
-    padding: 0.75rem 1rem;       /* Reduce heavy desktop side-padding */
-    height: auto;                /* Let height adjust naturally if items stack */
+    padding: 0.75rem 1rem;       
+    height: auto;                
     min-height: var(--nav-height); 
-    flex-direction: column;      /* Stack logo and navigation links if room is tight */
+    flex-direction: column;      /* Stacks "The Fly Lab" on top, links on bottom */
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;         /* Centers everything perfectly on mobile */
+    gap: 0.75rem;                /* Gives space between title and links */
   }
 
-  .navbar__subtitle {
-    display: none;               
+  .navbar__brand {
+    justify-content: center;     /* Centers the fly logo and title */
+    width: 100%;
   }
- 
+
   .navbar__title {
-    font-size: 1.2rem;           
+    font-size: 1.35rem;          /* Sizes down the text slightly so it fits any screen */
+    white-space: normal;         /* Allows title to wrap safely if on a very small phone */
+    text-align: center;
   }
 
   .navbar__links {
-    gap: 1rem;                   
+    gap: 1rem;                   /* Shrinks the desktop gap down so tabs stay on screen */
+    width: 100%;
+    justify-content: center;     /* Centers the navigation links under the title */
+    flex-wrap: wrap;             /* If a phone is tiny, links drop to a clean second row instead of breaking the layout */
   }
 
   .nav-link {
     font-size: 0.75rem;          
+    padding-bottom: 2px;
   }
 
   /* Page Constraints */
