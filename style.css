@@ -327,18 +327,20 @@ h3.person-name {
   color: var(--dark);
   margin-bottom: 0.6rem;
 }
-/* Shifts and indents bullet point lists within research projects */
+/* Cleanly shifts and indents the project bullet lists */
 .project-info ul {
-  margin-left: 1.5rem;       /* Tabs the entire list block inward */
-  margin-bottom: 0.85rem;    /* Creates nice separation from text below it */
-  padding-left: 0.25rem;     /* Subtle breathing room for bullet markers */
+  margin-left: 1.75rem !important;  /* Bumps the entire bullet block safely inside the card */
+  margin-bottom: 1rem;              /* Creates balanced spacing before the read more button */
+  padding-left: 0;                  /* Normalizes browser defaults */
 }
 
+/* Formats individual research lines nicely */
 .project-info ul li {
-  font-size: 0.93rem;        /* Matches your project description text size */
+  font-size: 0.93rem;               /* Perfectly matches your card's base text sizing */
   color: var(--dark);
-  margin-bottom: 0.4rem;     /* Adds a crisp, readable space between each bullet */
-} 
+  margin-bottom: 0.5rem;            /* Spreads individual bullets out so they're easy to read */
+  list-style-type: disc;            /* Ensures standard bullets display correctly */
+}
 .read-more {
   font-size: 0.8rem;
   font-weight: 500;
