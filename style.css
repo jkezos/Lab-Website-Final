@@ -532,4 +532,59 @@ h3.person-name {
   .navbar__links {
     gap: 1rem;
   }
+
+   /* =============================================
+   MOBILE RESPONSIVE STYLES (Screens under 768px)
+   ============================================= */
+@media (max-width: 768px) {
+  
+  /* 1. Fix the Navbar so it scales down nicely */
+  .navbar {
+    padding: 0 1rem;              /* Reduce heavy side-padding */
+    height: auto;                 /* Let height adjust naturally */
+    min-height: var(--nav-height); 
+    flex-direction: column;       /* Stack brand and links vertically if they don't fit */
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar__title {
+    font-size: 1.35rem;           /* Make the "Fly Lab" title slightly smaller for small screens */
+  }
+
+  .navbar__links {
+    gap: 1.25rem;                 /* Bring navigation tabs closer together so they don't overflow */
+  }
+
+  .nav-link {
+    font-size: 0.75rem;           /* Slightly smaller font for links */
+  }
+
+  /* 2. Fix the Pages */
+  .page {
+    padding: 1.5rem 1rem 3rem;   /* Reduce heavy page margins on mobile phones */
+  }
+
+  /* 3. Fix the About Layout (CRITICAL) */
+  .about-top {
+    flex-direction: column;       /* STACK the text and photo vertically on a phone! */
+    gap: 2rem;
+    align-items: center;          /* Center the content nicely */
+    text-align: left;
+  }
+
+  .image-placeholder:not(.small):not(.person) {
+    width: 100%;                  /* Allow your main image placeholders to scale down safely */
+    max-width: 320px;
+    height: 200px;
+  }
+
+  /* 4. Fix Research Project Cards */
+  .project-card {
+    flex-direction: column;       /* Stack project thumbnails/images on top of the descriptions */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
 } 
